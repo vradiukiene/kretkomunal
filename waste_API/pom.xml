@@ -126,7 +126,7 @@
 					<assembleDirectory>target</assembleDirectory>
 					<programs>
 						<program>
-							<mainClass>lt.kvk.i11.radiukiene.atliekosAPI.KretkomApplication</mainClass>
+							<!-- <mainClass>lt.kvk.i11.radiukiene.atliekosAPI.KretkomApplication</mainClass> -->
 							<name>webapp</name>
 						</program>
 					</programs>

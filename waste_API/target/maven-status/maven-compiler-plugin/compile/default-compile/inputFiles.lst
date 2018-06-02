@@ -1,0 +1,17 @@
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\controller\WasteController.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\controller\StreetController.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\dao\StreetDaoImpl.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\dao\WasteCollectionDao.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\service\ServiceInterface.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\service\ServiceImpl.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\controller\WasteCollectionController.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\dao\StreetDao.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\conf\HibernateConfiguration.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\component\StatusBean.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\dao\WasteCollectionDaoImpl.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\model\Waste.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\KretkomApplication.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\model\WasteCollection.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\model\AllWasteCollection.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\model\Street.java
+F:\5_semestras\PPJ\eclipse_projektai\waste_API\src\main\java\lt\kvk\radiukiene\waste_API\model\UpdateWaste.java

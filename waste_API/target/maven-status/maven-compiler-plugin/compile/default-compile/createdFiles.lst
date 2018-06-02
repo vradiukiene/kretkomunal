@@ -1,0 +1,17 @@
+lt\kvk\radiukiene\waste_API\dao\StreetDao.class
+lt\kvk\radiukiene\waste_API\controller\StreetController.class
+lt\kvk\radiukiene\waste_API\conf\HibernateConfiguration.class
+lt\kvk\radiukiene\waste_API\service\ServiceInterface.class
+lt\kvk\radiukiene\waste_API\model\UpdateWaste.class
+lt\kvk\radiukiene\waste_API\model\WasteCollection.class
+lt\kvk\radiukiene\waste_API\dao\WasteCollectionDao.class
+lt\kvk\radiukiene\waste_API\model\Waste.class
+lt\kvk\radiukiene\waste_API\model\Street.class
+lt\kvk\radiukiene\waste_API\KretkomApplication.class
+lt\kvk\radiukiene\waste_API\model\AllWasteCollection.class
+lt\kvk\radiukiene\waste_API\dao\WasteCollectionDaoImpl.class
+lt\kvk\radiukiene\waste_API\controller\WasteController.class
+lt\kvk\radiukiene\waste_API\component\StatusBean.class
+lt\kvk\radiukiene\waste_API\dao\StreetDaoImpl.class
+lt\kvk\radiukiene\waste_API\controller\WasteCollectionController.class
+lt\kvk\radiukiene\waste_API\service\ServiceImpl.class

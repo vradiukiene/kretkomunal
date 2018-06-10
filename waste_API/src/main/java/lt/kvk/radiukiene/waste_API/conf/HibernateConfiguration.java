@@ -7,6 +7,8 @@ import javax.sql.DataSource;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -26,25 +28,21 @@ public class HibernateConfiguration {
 	@Autowired
 	private Environment environment;
 	
-	@Bean
-	public DataSource getDataSource() {
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/heroku_9858eec6951620d?reconnect=true"); // JDBC connection
-		dataSource.setUsername("b27b6890ef13a6");
-		dataSource.setPassword("3af8eb12");
-		return dataSource;
-	}
-	
-	/*@Bean
-	public DataSource getDataSource() {
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://${DBHOSTNAME}:3306/${DBSCHEMA}"); // JDBC connection
-		dataSource.setUsername("${DBUSERNAME}");
-		dataSource.setPassword("${DBPASSWORD}");
-		return dataSource;
-	}*/
+	@Value("com.mysql.jdbc.Driver") String driverClassName;
+    @Value("jdbc:mysql://${DBHOSTNAME}:3306/${DBSCHEMA}") String url;
+    @Value("${DBUSERNAME}") String username;
+    @Value("${DBPASSWORD}") String password;
+    @Bean(name = "dataSource")
+    public DataSource getDataSource() {
+        DataSource dataSource = DataSourceBuilder
+                .create()
+                .username(username)
+                .password(password)
+                .url(url)
+                .driverClassName(driverClassName)
+                .build();
+        return dataSource;
+    }
 	
 	@Bean
 	public LocalSessionFactoryBean sessionFactory() throws URISyntaxException {

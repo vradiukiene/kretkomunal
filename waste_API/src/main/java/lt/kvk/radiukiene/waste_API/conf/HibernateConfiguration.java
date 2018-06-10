@@ -43,6 +43,16 @@ public class HibernateConfiguration {
                 .build();
         return dataSource;
     }
+    
+    /*@Bean
+	public DataSource getDataSource() {
+		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/heroku_9858eec6951620d?reconnect=true"); // JDBC connection
+		dataSource.setUsername("b27b6890ef13a6");
+		dataSource.setPassword("3af8eb12");
+		return dataSource;
+	}*/
 	
 	@Bean
 	public LocalSessionFactoryBean sessionFactory() throws URISyntaxException {

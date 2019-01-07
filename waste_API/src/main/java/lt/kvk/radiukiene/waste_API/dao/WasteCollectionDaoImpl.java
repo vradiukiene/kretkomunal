@@ -58,7 +58,7 @@ public class WasteCollectionDaoImpl implements WasteCollectionDao {
 			tx.commit();
 			return new AsyncResult<List<WasteCollection>>(new ArrayList<WasteCollection>());
 		} finally {
-			session.close();
+			//session.close();
 		}
 	}
 

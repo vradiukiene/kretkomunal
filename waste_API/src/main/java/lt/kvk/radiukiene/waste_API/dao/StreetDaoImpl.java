@@ -42,7 +42,7 @@ public class StreetDaoImpl implements StreetDao {
 			tx.commit();
 			return new AsyncResult<List<Street>>(new ArrayList<Street>());
 		} finally {
-			session.close();
+			//session.close();
 		}
 	}
 
@@ -63,7 +63,7 @@ public class StreetDaoImpl implements StreetDao {
 			tx.commit();
 			return new AsyncResult<List<Waste>>(new ArrayList<Waste>());
 		} finally {
-			session.close();
+			//session.close();
 		}
 	}
 

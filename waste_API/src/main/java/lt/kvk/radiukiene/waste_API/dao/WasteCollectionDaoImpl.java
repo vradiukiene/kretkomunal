@@ -44,18 +44,13 @@ public class WasteCollectionDaoImpl implements WasteCollectionDao {
 	
 	public Future<List<WasteCollection>> wasteCollectionListStreet(String street_id) {
 		Session session = this.sessionFactory.openSession();
-		Transaction tx = null;
 		try {
-			tx = session.beginTransaction();
 			String sql = "select (select wst.waste_name from waste as wst where wst.id = wstcol.waste_id) as waste_name, wstcol.street_id, wstcol.waste_id, wstcol.wasteCollect_date, wstcol.id  from wasteCollection as wstcol where street_id='"+street_id+"'";
 			SQLQuery query = session.createSQLQuery(sql);
 			List<WasteCollection> list = query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP).list();
 			return new AsyncResult<List<WasteCollection>>(list);
 		} catch (Exception e) {
-			if (tx != null)
-				tx.rollback();
 			e.printStackTrace();
-			tx.commit();
 			return new AsyncResult<List<WasteCollection>>(new ArrayList<WasteCollection>());
 		} finally {
 			session.close();

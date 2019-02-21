@@ -28,18 +28,18 @@ public class StreetDaoImpl implements StreetDao {
 
 	public Future<List<Street>> streetList() {
 		Session session = this.sessionFactory.openSession();
-		Transaction tx = null;
+		//Transaction tx = null;
 		try {
-			tx = session.beginTransaction();
+			//tx = session.beginTransaction();
 			String sql = "select str.street_name, str.id  from street as str";
 			SQLQuery query = session.createSQLQuery(sql);
 			List<Street> list = query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP).list();
 			return new AsyncResult<List<Street>>(list);
 		} catch (Exception e) {
-			if (tx != null)
-				tx.rollback();
+			//if (tx != null)
+				//tx.rollback();
 			e.printStackTrace();
-			tx.commit();
+			//tx.commit();
 			return new AsyncResult<List<Street>>(new ArrayList<Street>());
 		} finally {
 			session.close();
@@ -49,18 +49,18 @@ public class StreetDaoImpl implements StreetDao {
 
 	public Future<List<Waste>> wasteList() {
 		Session session = this.sessionFactory.openSession();
-		Transaction tx = null;
+		//Transaction tx = null;
 		try {
-			tx = session.beginTransaction();
+			//tx = session.beginTransaction();
 			String sql = "select wst.waste_name, wst.id  from waste as wst";
 			SQLQuery query = session.createSQLQuery(sql);
 			List<Waste> list = query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP).list();
 			return new AsyncResult<List<Waste>>(list);
 		} catch (Exception e) {
-			if (tx != null)
-				tx.rollback();
+			//if (tx != null)
+				//tx.rollback();
 			e.printStackTrace();
-			tx.commit();
+			//tx.commit();
 			return new AsyncResult<List<Waste>>(new ArrayList<Waste>());
 		} finally {
 			session.close();

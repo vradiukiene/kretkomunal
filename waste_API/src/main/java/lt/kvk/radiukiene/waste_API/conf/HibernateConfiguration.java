@@ -33,7 +33,17 @@ public class HibernateConfiguration {
     	@Value("${DBUSERNAME}") String username;
     	@Value("${DBPASSWORD}") String password;
     	@Bean(name = "dataSource")
-	public ComboPooledDataSource getDataSource() {
+	public DataSource getDataSource() {
+        DataSource dataSource = DataSourceBuilder
+                .create()
+                .username(username)
+                .password(password)
+                .url(url)
+                .driverClassName(driverClassName)
+                .build();
+        return dataSource;
+    	}
+	/*public ComboPooledDataSource getDataSource() {
         	ComboPooledDataSource cpds = new ComboPooledDataSource();
         	cpds.setJdbcUrl(url);
        		cpds.setUser(username);
@@ -59,17 +69,8 @@ public class HibernateConfiguration {
         				// unused before being discarded.
         				// Zero means idle connections never expire.
 	        return cpds;
-    	}
-    /*public DataSource getDataSource() {
-        DataSource dataSource = DataSourceBuilder
-                .create()
-                .username(username)
-                .password(password)
-                .url(url)
-                .driverClassName(driverClassName)
-                .build();
-        return dataSource;
-    }*/
+    	}*/
+    
 	
 	@Bean
 	public LocalSessionFactoryBean sessionFactory() throws URISyntaxException {

@@ -18,6 +18,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 @Configuration
 @EnableTransactionManagement
@@ -33,7 +34,7 @@ public class HibernateConfiguration {
     	@Value("${DBUSERNAME}") String username;
     	@Value("${DBPASSWORD}") String password;
     	@Bean(name = "dataSource")
-	public DataSource getDataSource() {
+	/*public DataSource getDataSource() {
         DataSource dataSource = DataSourceBuilder
                 .create()
                 .username(username)
@@ -42,8 +43,8 @@ public class HibernateConfiguration {
                 .driverClassName(driverClassName)
                 .build();
         return dataSource;
-    	}
-	/*public ComboPooledDataSource getDataSource() {
+    	}*/
+	public ComboPooledDataSource getDataSource() {
         	ComboPooledDataSource cpds = new ComboPooledDataSource();
         	cpds.setJdbcUrl(url);
        		cpds.setUser(username);
@@ -69,7 +70,7 @@ public class HibernateConfiguration {
         				// unused before being discarded.
         				// Zero means idle connections never expire.
 	        return cpds;
-    	}*/
+    	}
     
 	
 	@Bean
